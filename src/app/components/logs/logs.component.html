@@ -1,0 +1,14 @@
+<ul class="list-group mt-3" *ngIf="loaded && logs.length > 0">
+    <li *ngFor="let log of logs" [class.list-group-item-secondary]="selectedLog === log" class="list-group-item d-flex justify-content-between align-items-center">
+        <a (click)="onSelect(log)">{{ log.text }}</a>
+        <span class="log-date">{{ log.date | date:'short' }}</span>
+        <i class="fa fa-remove" (click)="onDelete(log)"></i>
+    </li>
+</ul>
+
+<div *ngIf="loaded && logs.length == 0" class="mt-3">
+    <h5>There no logs in systems</h5>
+</div>
+<div *ngIf="!loaded" class="mt-3">
+    <h5>Loading...</h5>
+</div>
