@@ -17,11 +17,6 @@ export class LogService {
   stateClear = this.stateSource.asObservable();
 
   constructor(){
-    // this.logs = [
-    //   {id: '1', text:'Rohit Kanade', date: new Date('12/12/2018 12:20:33')},
-    //   {id: '2', text:'Sagar Kanade', date: new Date('1/23/2019 10:45:20')},
-    //   {id: '3', text:'Piu Kanade', date: new Date('4/10/2020 11:13:37')},
-    // ];
     this.logs = [];
   }
 
